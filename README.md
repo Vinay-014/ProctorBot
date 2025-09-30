@@ -330,15 +330,7 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📧 Contact & Support
-
-For questions, issues, or suggestions:
-
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/video-proctoring-system/issues)
-- **Email**: your.email@example.com
-- **Documentation**: [Wiki](https://github.com/yourusername/video-proctoring-system/wiki)
-
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - **MediaPipe** - Google's ML solutions for face detection
 - **TensorFlow.js** - Browser-based machine learning
