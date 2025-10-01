@@ -25,6 +25,7 @@ export const VideoMonitor = ({ isRecording, onEventDetected }: VideoMonitorProps
   const lastFaceCountRef = useRef<number>(0);
   const lastObjectCheckRef = useRef<number>(0);
   const detectedObjectsRef = useRef<Set<string>>(new Set());
+  const focusLostEventFiredRef = useRef<boolean>(false);
 
   const updateStatus = useCallback((status: string, color: 'green' | 'yellow' | 'red') => {
     setCurrentStatus(status);
@@ -106,17 +107,26 @@ export const VideoMonitor = ({ isRecording, onEventDetected }: VideoMonitorProps
           const event = createEvent('no_face', 'No face detected for 10 seconds', 'high');
           onEventDetected(event);
           updateStatus('⚠️ No face detected!', 'red');
-        } else if (focusLostTimerRef.current >= 5) {
+        } else if (focusLostTimerRef.current === 5 && !focusLostEventFiredRef.current) {
+          const event = createEvent('focus_lost', 'Candidate looking away for 5 seconds', 'medium');
+          onEventDetected(event);
+          focusLostEventFiredRef.current = true;
+          updateStatus('⚠️ Focus lost', 'red');
+        } else if (focusLostTimerRef.current > 5) {
           updateStatus('⚠️ Candidate not visible', 'red');
         }
       } else if (faceCount === 1) {
         if (noFaceTimerRef.current >= 10) {
           const event = createEvent('face_detected', 'Face detected again', 'low');
           onEventDetected(event);
+        } else if (focusLostEventFiredRef.current) {
+          const event = createEvent('focus_regained', 'Candidate focused again', 'low');
+          onEventDetected(event);
         }
 
         noFaceTimerRef.current = 0;
         focusLostTimerRef.current = 0;
+        focusLostEventFiredRef.current = false;
         updateStatus('✓ Candidate focused', 'green');
       } else if (faceCount > 1) {
         if (lastFaceCountRef.current <= 1) {

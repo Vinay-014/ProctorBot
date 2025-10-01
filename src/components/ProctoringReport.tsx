@@ -88,18 +88,22 @@ export const ProctoringReport = ({ sessionData, onClose }: ProctoringReportProps
               <div className="bg-red-50 border-2 border-red-200 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-1">No Face Detected</p>
                 <p className="text-3xl font-bold text-red-600">{stats.noFaceCount}</p>
+                <p className="text-xs text-red-500 mt-1">-5 points each</p>
               </div>
               <div className="bg-orange-50 border-2 border-orange-200 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-1">Focus Lost</p>
                 <p className="text-3xl font-bold text-orange-600">{stats.focusLostCount}</p>
+                <p className="text-xs text-orange-500 mt-1">-2 points each</p>
               </div>
               <div className="bg-yellow-50 border-2 border-yellow-200 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-1">Multiple Faces</p>
                 <p className="text-3xl font-bold text-yellow-600">{stats.multipleFacesCount}</p>
+                <p className="text-xs text-yellow-600 mt-1">-10 points each</p>
               </div>
-              <div className="bg-purple-50 border-2 border-purple-200 p-4 rounded-lg">
+              <div className="bg-pink-50 border-2 border-pink-200 p-4 rounded-lg">
                 <p className="text-sm text-gray-600 mb-1">Suspicious Objects</p>
-                <p className="text-3xl font-bold text-purple-600">{stats.suspiciousObjectCount}</p>
+                <p className="text-3xl font-bold text-pink-600">{stats.suspiciousObjectCount}</p>
+                <p className="text-xs text-pink-500 mt-1">-15 points each</p>
               </div>
             </div>
           </div>
