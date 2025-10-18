@@ -347,4 +347,3 @@ Contributions are welcome! Please follow these steps:
 
 **Note**: This system is designed for educational and professional interview monitoring. Always ensure compliance with local privacy laws and obtain proper consent from candidates before use.
 
-Made with ❤️ using React, TypeScript, and AI
