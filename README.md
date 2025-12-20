@@ -1,4 +1,4 @@
-# 🎯 AI-Powered Video Proctoring System
+#  AI-Powered Video Proctoring System
 
 A sophisticated real-time video proctoring system that monitors candidates during online interviews using advanced AI technologies. The system detects focus levels, unauthorized objects, and generates comprehensive integrity reports.
 
@@ -7,7 +7,7 @@ A sophisticated real-time video proctoring system that monitors candidates durin
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue.svg)
 ![TensorFlow.js](https://img.shields.io/badge/TensorFlow.js-4.22.0-orange.svg)
 
-## ✨ Features
+##  Features
 
 ### Core Functionality
 
@@ -28,21 +28,21 @@ A sophisticated real-time video proctoring system that monitors candidates durin
 - **Detailed Reports** - Exportable proctoring reports with complete session analytics
 - **Visual Indicators** - Color-coded status overlays showing current monitoring state
 
-### User Experience
+### UX
 
 - **Clean Interface** - Modern, intuitive design with professional aesthetics
 - **Real-Time Status** - Visual feedback showing recording status and AI model loading state
 - **Session Management** - Easy start/stop controls with candidate information tracking
 - **Downloadable Reports** - Export detailed text reports for record-keeping
 
-## 🏗️ Technology Stack
+##  Tech Stack
 
-### Frontend Framework
+### Frontend
 - **React 18.3.1** - Modern component-based UI
 - **TypeScript 5.5.3** - Type-safe development
 - **Vite 5.4.2** - Lightning-fast build tool
 
-### AI & Machine Learning
+### AI/ML
 - **MediaPipe Tasks Vision** - Face detection and tracking
 - **TensorFlow.js 4.22.0** - In-browser machine learning
 - **COCO-SSD Model** - Object detection
@@ -54,7 +54,7 @@ A sophisticated real-time video proctoring system that monitors candidates durin
 ### Backend (Ready for Integration)
 - **Supabase** - Database and authentication ready
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Before running this project, ensure you have:
 
@@ -63,7 +63,7 @@ Before running this project, ensure you have:
 - **Webcam** access for video monitoring
 - **Modern browser** with WebRTC support (Chrome, Firefox, Edge)
 
-## 🚀 Installation
+##  Installation
 
 1. **Clone the repository**
    ```bash
@@ -84,7 +84,7 @@ Before running this project, ensure you have:
 4. **Open your browser**
    Navigate to `http://localhost:5173`
 
-## 🎮 Usage
+##  Usage
 
 ### Starting an Interview Session
 
@@ -124,7 +124,7 @@ The system uses a deduction-based scoring system starting from 100:
 - **60-69**: Poor - Significant violations
 - **<60**: Very Poor - Multiple serious violations
 
-## 📊 Detection Logic
+##  Detection Logic
 
 ### Focus Detection Algorithm
 
@@ -146,7 +146,7 @@ if (noFaceDetected) {
 - Object detection: Every 3 seconds (to optimize performance)
 - Duplicate prevention: 5-second cooldown per object type
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 video-proctoring-system/
@@ -169,7 +169,7 @@ video-proctoring-system/
 └── package.json                    # Dependencies
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### Vite Configuration
 
@@ -195,7 +195,7 @@ const FOCUS_LOST_THRESHOLD = 5; // seconds
 const OBJECT_CHECK_INTERVAL = 3000; // milliseconds
 ```
 
-## 🎨 Customization
+##  Customization
 
 ### Adding New Suspicious Objects
 
@@ -226,7 +226,7 @@ export const calculateIntegrityScore = (stats: DetectionStats): number => {
 };
 ```
 
-## 📦 Building for Production
+##  Building for Production
 
 ```bash
 npm run build
@@ -240,7 +240,7 @@ The optimized production build will be in the `dist/` directory.
 npm run preview
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Type Checking
 
@@ -254,7 +254,7 @@ npm run typecheck
 npm run lint
 ```
 
-## 🔐 Privacy & Security
+##  Privacy & Security
 
 - **Local Processing**: All AI computations happen in the browser
 - **No Cloud Uploads**: Video streams are not uploaded to external servers
@@ -262,7 +262,7 @@ npm run lint
 - **Camera Access**: Used only during active sessions
 - **Data Persistence**: Ready for Supabase integration for secure storage
 
-## 🚧 Future Enhancements
+##  Future Enhancements
 
 ### Planned Features
 
@@ -291,7 +291,7 @@ interface Session {
 }
 ```
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Camera Not Working
 
@@ -316,11 +316,11 @@ interface Session {
    video: { width: 640, height: 480 } // Lower resolution
    ```
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -337,7 +337,7 @@ Contributions are welcome! Please follow these steps:
 - **COCO-SSD** - Pre-trained object detection model
 - **React Community** - For the amazing ecosystem
 
-## 📊 Project Status
+##  Project Status
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ![Coverage](https://img.shields.io/badge/coverage-85%25-green.svg)
